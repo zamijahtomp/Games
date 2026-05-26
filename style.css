@@ -102,7 +102,7 @@ h2 {
 }
 
 #games {
-    background-color: #2e662e;
+    background-color: var(--light-mode-background-color-2);
     border-radius: 20px;
     padding: 10px 0px;
     margin: 50px 100px;
@@ -161,8 +161,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #245324;
-    padding: 2%;
+    background-color: #12161d;
+    padding: 5% 5%;
     margin: 1%;
     width: 300px;
     text-align: center;
@@ -180,7 +180,7 @@ h2 {
 }
 
 #button-container button {
-    background-color: #245324;
+    background-color: #1d1d2f;
     cursor: pointer;
     font-family: 'Cabin';
     border: none;
@@ -189,6 +189,7 @@ h2 {
     margin: 1%;
     border-radius: 7px;
     transition-duration: .3s;
+    font-size: 20px;
 }
 
 #button-container button:hover {
@@ -198,7 +199,7 @@ h2 {
 
 :root {
     --dark-mode-background-color-3: #4a2f58;
-    --light-mode-background-color-1: #650898;
-    --light-mode-background-color-2: #9e54c6;
-    --light-mode-background-color-3: #672e86;
+    --light-mode-background-color-1: #15051e;
+    --light-mode-background-color-2: #291b30;
+    --light-mode-background-color-3: #24182a;
 }

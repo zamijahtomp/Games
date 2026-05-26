@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+/* 
+header {
+    display: flex;
+    flex-direction: row;
+} */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;          /* Vertically centers navbar with the title */
+    justify-content: space-between; /* Pushes title left, navbar right */
+    background-color: var(--light-mode-background-color-2);    /* Move bg color here from .header */
+    padding: 1%;
+    margin: -10px -10px 0 -10px;  /* Keep your existing margin */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+/* Unify the look of links and buttons */
+.navbar ul li a, 
+.navbar ul li button {
+    display: inline-block;
+    padding: 10px 100px;           /* Adds the 'button' shape */
+    text-decoration: none;
+    color: white;
+    background-color: var(--light-mode-background-color-2);       
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.2s;
+    font-size: 24px;
+    align-items: center;
+}
+
+.navbar ul li button {
+    color: white;
+    transition-duration: .3s;
+}
+
+
+/* Add a hover effect for that 'clickable' feel */
+.navbar ul li a:hover, 
+.navbar ul li button:hover {
+    background-color: #732f98;       /* Lighten or change color on hover */
+    transform: scale(1.05);       /* Subtle pop effect */
+}
+
+/* Flexbox layout for the list container */
+.navbar ul {
+    display: flex;
+    justify-content: center;      /* Centers the buttons */
+    gap: 15px;                    /* Replaces margin to space items evenly */
+    list-style-type: none;
+    padding: 0;                   /* Removes default browser list padding */
+    margin: 20px 0;
+}
+
+body {
+    font-family: 'Cabin';
+    background-color: var(--light-mode-background-color-1);
+}
+
+#tentacles {
+    width: 50px;
+}
+
+.header h1 {
+    color: white;
+}
+
+h2 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 40px;
+}
+
+#description-container {
+    background-color: var(--light-mode-background-color-2);
+    border-radius: 20px;
+    padding: 10px 0px;
+    margin: 30px 100px;
+}
+
+#description-container p {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#games p {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#games {
+    background-color: #2e662e;
+    border-radius: 20px;
+    padding: 10px 0px;
+    margin: 50px 100px;
+}
+
+.stats-wrapper {
+    background-color: var(--light-mode-background-color-2);
+    border-radius: 20px;
+    padding: 10px 0px;
+    margin: 30px 200px;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;        /* Keep this! */
+    justify-content: center; /* This centers your cards nicely */
+    gap: 20px;               /* Use gap instead of margin for spacing */
+    background-color: var(--light-mode-background-color-2);
+    padding: 20px;
+    margin: 0 auto;         /* Centers the container on the page */
+    max-width: 900px;      /* Prevents it from getting too wide */
+}
+
+.stats-card {
+    background-color: var(--light-mode-background-color-3); /* Changed to contrast with the container */
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1 1 200px;        /* The "magic" flex property */
+    max-width: 350px;       /* Prevents cards from getting huge */
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.stats-card h3, .stats-card p {
+    color: white;
+}
+
+#num-contributions, #total-raised, #num-games {
+    font-size: 50px;
+}
+
+#games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.game-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #FFFFFF;
+}
+
+.game-card {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #245324;
+    padding: 2%;
+    margin: 1%;
+    width: 300px;
+    text-align: center;
+    border-radius: 7px;
+    transition-duration: .3s;
+}
+
+.game-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgb(240, 231, 137);
+}
+
+#button-container {
+    text-align: center;
+}
+
+#button-container button {
+    background-color: #245324;
+    cursor: pointer;
+    font-family: 'Cabin';
+    border: none;
+    color: white;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 7px;
+    transition-duration: .3s;
+}
+
+#button-container button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgb(240, 231, 137);
+}
+
+:root {
+    --dark-mode-background-color-3: #4a2f58;
+    --light-mode-background-color-1: #650898;
+    --light-mode-background-color-2: #9e54c6;
+    --light-mode-background-color-3: #672e86;
+}

@@ -5,6 +5,7 @@
 */
 
 // import the JSON data about the crowd pc games from the games.js file
+// import { dark } from '@material-ui/core/styles/createPalette.js';
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -128,6 +129,9 @@ function filterpcOnly() {
     addGamesToPage(listOfpcOnly);
 }
 
+const toggleDarkMode = () => {
+    document.body.classList.toggle("dark-mode");
+};
 // show all games
 // function showAllGames() {
 //     deleteChildElements(gamesContainer);
@@ -139,11 +143,13 @@ function filterpcOnly() {
 // select each button in the "Our Games" section
 const mobileBtn = document.getElementById("mobile-btn");
 const pcBtn = document.getElementById("pc-btn");
+const darkmodeBtn = document.getElementById("theme-button");
 // const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
 mobileBtn.addEventListener("click", filtermobileOnly)
 pcBtn.addEventListener("click", filterpcOnly)
+darkmodeBtn.addEventListener("click", toggleDarkMode)
 // allBtn.addEventListener("click", showAllGames)
 
 /*************************************************************************************

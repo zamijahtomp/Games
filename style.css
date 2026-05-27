@@ -11,6 +11,10 @@ header {
     margin: -10px -10px 0 -10px;  /* Keep your existing margin */
 }
 
+.dark-mode header {
+    background-color: var(--dark-mode-background-color-2);
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -23,7 +27,7 @@ header {
     padding: 10px 100px;           /* Adds the 'button' shape */
     text-decoration: none;
     color: white;
-    background-color: var(--light-mode-background-color-2);       
+    background-color: var(--light-mode-buttons);       
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -31,6 +35,11 @@ header {
     transition: 0.2s;
     font-size: 24px;
     align-items: center;
+}
+
+.dark-mode .navbar ul li a, 
+.dark-mode .navbar ul li button {
+    background-color: var(--dark-mode-background-color-3);       
 }
 
 .navbar ul li button {
@@ -42,7 +51,13 @@ header {
 /* Add a hover effect for that 'clickable' feel */
 .navbar ul li a:hover, 
 .navbar ul li button:hover {
-    background-color: #732f98;       /* Lighten or change color on hover */
+    background-color: #5f5fb9;       /* Lighten or change color on hover */
+    transform: scale(1.05);       /* Subtle pop effect */
+}
+
+.dark-mode .navbar ul li a:hover, 
+.dark-mode .navbar ul li button:hover {
+    background-color: #401956;       /* Lighten or change color on hover */
     transform: scale(1.05);       /* Subtle pop effect */
 }
 
@@ -59,6 +74,10 @@ header {
 body {
     font-family: 'Cabin';
     background-color: var(--light-mode-background-color-1);
+}
+
+.dark-mode {
+    background-color: var(--dark-mode-background-color-1);
 }
 
 #tentacles {
@@ -104,6 +123,10 @@ h2 {
     border-radius: 20px;
     padding: 10px 0px;
     margin: 50px 100px;
+}
+
+.dark-mode #games {
+    background-color: var(--dark-mode-background-color-2);
 }
 
 .stats-wrapper {
@@ -193,7 +216,7 @@ h2 {
 }
 
 #button-container button {
-    background-color: #1d1d2f;
+    background-color: var(--light-mode-buttons);
     cursor: pointer;
     font-family: 'Cabin';
     border: none;
@@ -205,9 +228,18 @@ h2 {
     font-size: 30px;
 }
 
+.dark-mode #button-container button {
+    background-color: var(--dark-mode-buttons);
+}
+
 #button-container button:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px rgb(240, 231, 137);
+    box-shadow: 0 0 30px rgb(149, 29, 213);
+}
+
+.dark-mode #button-container button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgb(204, 137, 240);
 }
 
 /* ==========================================
@@ -397,8 +429,12 @@ h2 {
 }
 
 :root {
-    --dark-mode-background-color-3: #4a2f58;
-    --light-mode-background-color-1: #15051e;
-    --light-mode-background-color-2: #291b30;
-    --light-mode-background-color-3: #24182a;
+    --light-mode-buttons: #7272ba;
+    --light-mode-background-color-1: #8d27c8;
+    --light-mode-background-color-2: #9965b3;
+    --light-mode-background-color-3: #573b65;
+    --dark-mode-buttons: #1d1d2f;
+    --dark-mode-background-color-1: #15051e;
+    --dark-mode-background-color-2: #291b30;
+    --dark-mode-background-color-3: #24182a;
 }

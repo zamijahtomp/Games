@@ -28,7 +28,7 @@ const games = ` [
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
-    "img": "./assets/zoo_tycoon.png",
+    "img": "./assets/deity_tarot.png",
     "device": "mobile",
     "link": "https://battleship.zamijah-shakeurtomp.workers.dev/",
     "theme": "battleship-theme"

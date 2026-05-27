@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
-/* 
-header {
-    display: flex;
-    flex-direction: row;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pacifico&family=Press+Start+2P&display=swap');
 
 header {
     display: flex;
@@ -96,9 +92,11 @@ h2 {
 
 #games p {
     display: flex;
+    padding: 0px 50px;
     color: white;
     justify-content: center;
     font-size: 20px;
+    /* max-width: 500px; */
 }
 
 #games {
@@ -164,7 +162,7 @@ h2 {
     background-color: #12161d;
     padding: 5% 5%;
     margin: 1%;
-    width: 300px;
+    width: 400px;
     text-align: center;
     border-radius: 7px;
     transition-duration: .3s;
@@ -189,12 +187,102 @@ h2 {
     margin: 1%;
     border-radius: 7px;
     transition-duration: .3s;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #button-container button:hover {
     cursor: pointer;
     box-shadow: 0 0 30px rgb(240, 231, 137);
+}
+
+/* ==========================================
+   INDIVIDUAL GAME CARD THEMES
+   ========================================== */
+
+/* Alien: 2D Theme (Sci-Fi / Minimal) */
+.game-card.alien-theme {
+    background: #111a24;
+    border: 2px dashed #00ffcc;
+    color: #e0e0e0;
+}
+
+.game-card.alien-theme:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 255, 204, 0.822);
+}
+
+.game-card.alien-theme h3 {
+    font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
+    color: #00ffcc;
+}
+
+.game-card.alien-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    /* line-height: 1.6; */
+}
+
+/* Pong Theme (Retro Arcade Red) */
+.game-card.pong-theme {
+    background: #1a0505;
+    border: 3px dashed #ff3333;
+    color: #ffffff;
+}
+.game-card.pong-theme:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(255, 51, 51, 0.744);
+}
+.game-card.pong-theme h3 {
+    font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
+    color: #ff3333;
+    text-transform: uppercase;
+}
+.game-card.pong-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    /* line-height: 1.6; */
+}
+
+/* Battleship Theme (Retro Arcade Blue) */
+.game-card.battleship-theme {
+    background: #1c2fae;
+    border: 3px dashed #ff3333;
+    color: #ffffff;
+}
+.game-card.battleship-theme:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(255, 51, 51, 0.759);
+}
+.game-card.battleship-theme h3 {
+    font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
+    color: #ff3333;
+    text-transform: uppercase;
+}
+.game-card.battleship-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* Stories Theme (Romantic Girly Pink) */
+.game-card.stories-theme {
+    background: #ff1493;
+    border: 5px solid #ff69b4;
+    color: #4a4a4a;
+    border-radius: 20px; /* Softer, rounder corners for the story app */
+}
+.game-card.stories-theme:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(255, 105, 180, 0.775);
+}
+.game-card.stories-theme h3 {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    line-height: .1;
+    color: #fff0f5;
+}
+.game-card.stories-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 :root {

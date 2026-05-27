@@ -4,7 +4,7 @@
  * -> A function that deletes all child elements from a parent element in the DOM
 */
 
-// import the JSON data about the crowd funded games from the games.js file
+// import the JSON data about the crowd pc games from the games.js file
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -17,10 +17,6 @@ function deleteChildElements(parent) {
     }
 }
 
-let x=10;
-let y=4
-console.log("The answer to ${x} + ${y} is ${x+y}");
-
 /*****************************************************************************
  * Challenge 3: Add data about each game as a card to the games-container
  * Skills used: DOM manipulation, for loops, template literals, functions
@@ -29,45 +25,43 @@ console.log("The answer to ${x} + ${y} is ${x+y}");
 // grab the element with the id games-container
 const gamesContainer = document.getElementById("games-container");
 
-// create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
-
-    // loop over each item in the data
     for (const game of games) {
-        // create a new div element, which will become the game card
+        // Create a button element so it's fully clickable
         const gameCard = document.createElement("button");
-
-        // add the class game-card to the list
+        
+        // Add your base styles that apply to ALL cards
         gameCard.classList.add("game-card");
 
-        // set the inner HTML using a template literal to display some info 
-        // about each game
-        // TIP: if your images are not displaying, make sure there is space
-        // between the end of the src attribute and the end of the tag ("/>")
+        // DYNAMIC STEP: Add the individual theme class from games.js
+        if (game.theme) {
+            gameCard.classList.add(game.theme);
+        } else {
+            gameCard.classList.add("default-theme"); // Fallback look
+        }
+
+        // Set up the card internal HTML structure
         gameCard.innerHTML = `
             <h3>${game.name}</h3>
             <p>${game.description}</p>
-            <img class="game-img" src="${game.img}" />
+            <img class="game-img" src="${game.img}" alt="${game.name}" />
         `;
 
-        // ATTACH THE CLICK EVENT DIRECTLY TO THIS CARD
-        gameCard.addEventListener("click", function() {
-            // Check to make sure the game object has a link property before redirecting
+        // Handle card click to open the link
+        gameCard.addEventListener("click", () => {
             if (game.link) {
                 window.location.href = game.link;
-            } else {
-                console.log(`No link found for ${game.name}`);
             }
         });
 
-        // append the game to the games-container
+        // Append the styled card to your container grid
         gamesContainer.appendChild(gameCard);
     }
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-addGamesToPage(GAMES_JSON);
+// addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
@@ -103,54 +97,54 @@ addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
- * Challenge 5: Add functions to filter the funded and unfunded games
+ * Challenge 5: Add functions to filter the pc and mobile games
  * total number of contributions, amount donated, and number of games on the site.
  * Skills used: functions, filter
 */
 
 // show only games that do not yet have enough funding
-function filterUnfundedOnly() {
+function filtermobileOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-    let listOfUnfundedOnly = GAMES_JSON.filter ( (game) => {
+    let listOfmobileOnly = GAMES_JSON.filter ( (game) => {
         return game.device === "mobile";
     });
 
-    // use the function we previously created to add the unfunded games to the DOM
-    addGamesToPage(listOfUnfundedOnly);
+    // use the function we previously created to add the mobile games to the DOM
+    addGamesToPage(listOfmobileOnly);
 }
 
-// show only games that are fully funded
-function filterFundedOnly() {
+// show only games that are fully pc
+function filterpcOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have met or exceeded their goal
-    let listOfFundedOnly = GAMES_JSON.filter ( (game) => {
+    let listOfpcOnly = GAMES_JSON.filter ( (game) => {
         return game.device === "pc";
     });
 
-    // use the function we previously created to add unfunded games to the DOM
-    addGamesToPage(listOfFundedOnly);
+    // use the function we previously created to add mobile games to the DOM
+    addGamesToPage(listOfpcOnly);
 }
 
 // show all games
-function showAllGames() {
-    deleteChildElements(gamesContainer);
+// function showAllGames() {
+//     deleteChildElements(gamesContainer);
 
-    // add all games from the JSON data to the DOM
-    addGamesToPage(GAMES_JSON);
-}
+//     // add all games from the JSON data to the DOM
+//     addGamesToPage(GAMES_JSON);
+// }
 
 // select each button in the "Our Games" section
-const unfundedBtn = document.getElementById("unfunded-btn");
-const fundedBtn = document.getElementById("funded-btn");
-const allBtn = document.getElementById("all-btn");
+const mobileBtn = document.getElementById("mobile-btn");
+const pcBtn = document.getElementById("pc-btn");
+// const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-unfundedBtn.addEventListener("click", filterUnfundedOnly)
-fundedBtn.addEventListener("click", filterFundedOnly)
-allBtn.addEventListener("click", showAllGames)
+mobileBtn.addEventListener("click", filtermobileOnly)
+pcBtn.addEventListener("click", filterpcOnly)
+// allBtn.addEventListener("click", showAllGames)
 
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
@@ -160,19 +154,19 @@ allBtn.addEventListener("click", showAllGames)
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
 
-// use filter or reduce to count the number of unfunded games
-const unfundedGames = GAMES_JSON.filter( (game) => {
+// use filter or reduce to count the number of mobile games
+const mobileGames = GAMES_JSON.filter( (game) => {
     return game.pledged < game.goal;
 });
 console.log(); // get the length of that filtered list
 
-// create a string that explains the number of unfunded games using the ternary operator
+// create a string that explains the number of mobile games using the ternary operator
 // create the variable for the grammatical string part
-const gameText = unfundedGames.length === 1 
+const gameText = mobileGames.length === 1 
   ? '1 game remains' 
-  : `${unfundedGames.length} games remain`;
+  : `${mobileGames.length} games remain`;
 // assemble the final string
-// const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${gameText} unfunded. We need your help to fund these amazing games!`;
+// const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${gameText} mobile. We need your help to fund these amazing games!`;
 
 // // create a new DOM element containing the template string and append it to the description container
 // const newPara = document.createElement('p');

@@ -386,7 +386,7 @@ h2 {
 
     /* ADD THIS REFINEMENT BLOCK BELOW IT */
     .game-card {
-        width: 90% !important; /* Force cards to scale dynamically down with the grid */
+        width: 80% !important; /* Force cards to scale dynamically down with the grid */
         margin: 15px 0px !important; /* CLEARS OUT horizontal margins so they don't add to width! */
     }
 

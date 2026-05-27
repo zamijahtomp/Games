@@ -1,0 +1,16 @@
+{
+  "short_name": "Stories",
+  "name": "Stories - Choice Adventures",
+  "icons": [
+    {
+      "src": "/img/icon.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#ffe3ec",
+  "theme_color": "#ff5c8a",
+  "display": "standalone",
+  "orientation": "portrait"
+}

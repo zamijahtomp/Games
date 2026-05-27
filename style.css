@@ -174,7 +174,7 @@ h2 {
     align-items: center;
     background-color: #12161d;
     padding: 20px;          /* Switched from % to static padding for tighter mobile spacing */
-    margin: 15px 5px;      
+    margin: 15px 10px;      
     width: 100%;            /* Force card to fill container width on mobile */
     max-width: 400px;       /* PREVENTS the card from ever stretching larger than 400px on desktop */
     text-align: center;
@@ -381,7 +381,17 @@ h2 {
         flex-direction: column;
         align-items: center; /* Centers cards vertically on portrait screens */
         width: 100%;
-        padding: 0 10px;
+        padding: 0 15px;     /* Leaves a safe 15px breathing gutter on screen edges */
+    }
+
+    /* ADD THIS REFINEMENT BLOCK BELOW IT */
+    .game-card {
+        width: 100% !important; /* Force cards to scale dynamically down with the grid */
+        margin: 15px 0px !important; /* CLEARS OUT horizontal margins so they don't add to width! */
+    }
+
+    .game-img {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important; /* Soften image shadow on tiny mobile screens */
     }
 }
 

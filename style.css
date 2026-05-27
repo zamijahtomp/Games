@@ -333,6 +333,29 @@ h2 {
     line-height: 1.1;
 }
 
+/* Invasion Theme (Sci-Fi / Minimal) */
+.game-card.invasion-theme {
+    background: #111a24;
+    border: 2px dashed #00ffcc;
+    color: #e0e0e0;
+}
+
+.game-card.invasion-theme:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 255, 204, 0.822);
+}
+
+.game-card.invasion-theme h3 {
+    font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
+    color: #00ffcc;
+}
+
+.game-card.invasion-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    /* line-height: 1.6; */
+}
+
 /* ==========================================
    MOBILE-FIRST RESPONSIVE BREAKPOINT
    ========================================== */

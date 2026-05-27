@@ -29,7 +29,7 @@ const games = ` [
     "goal": 78480,
     "backers": 3869,
     "img": "./assets/deity_tarot.png",
-    "device": "mobile",
+    "device": "pc",
     "link": "https://battleship.zamijah-shakeurtomp.workers.dev/",
     "theme": "battleship-theme"
   },
@@ -43,6 +43,17 @@ const games = ` [
     "device": "mobile",
     "link": "https://stories.zamijah-shakeurtomp.workers.dev/",
     "theme": "stories-theme"
+  },
+  {
+    "name": "Invasion",
+    "description": "The aliens are coming! Defend planet Earth in this mobile remake of the retro Battleship.",
+    "pledged": 442602,
+    "goal": 78480,
+    "backers": 3869,
+    "img": "./assets/zoo_tycoon.png",
+    "device": "mobile",
+    "link": "https://invasion.zamijah-shakeurtomp.workers.dev/",
+    "theme": "invasion-theme"
   }
 ]
 `

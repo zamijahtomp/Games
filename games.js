@@ -13,7 +13,7 @@ const games = ` [
   },
   {
     "name": "🏓Pong🏓",
-    "description": "A 2-player remake of the retro game Pong. Compete with friends and win challenges, or test your skills with the cpu and sotry mode (coming soon).",
+    "description": "A 2-player remake of the retro game Pong. Compete with friends and win challenges, or test your skills with the computer in cpu mode.",
     "pledged": 29446,
     "goal": 20000,
     "backers": 321,

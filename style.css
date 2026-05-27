@@ -177,7 +177,7 @@ h2 {
     margin: 15px 0px;      
     width: 100%;            /* Force card to fill container width on mobile */
     max-width: 400px;       /* PREVENTS the card from ever stretching larger than 400px on desktop */
-    text-align: center;
+    /* text-align: center; */
     border-radius: 7px;
     transition-duration: .3s;
     box-sizing: border-box; /* Ensures padding doesn't break the width calculations */

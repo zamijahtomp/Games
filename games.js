@@ -1,17 +1,6 @@
 // Image credits: Kickstarter
 const games = ` [
   {
-    "name": "Alien: 2D",
-    "description": "A 2d top down rpg that takes inspiration from the Alien franchise. Search for the tickets to acces the secrets of the ship, and maybe save it.",
-    "pledged": 1572,
-    "goal": 10000,
-    "backers": 9,
-    "img": "./assets/heroes_of_mythic_americas.png",
-    "device": "pc",
-    "link": "https://rpg.zamijah-shakeurtomp.workers.dev/",
-    "theme": "alien-theme"
-  },
-  {
     "name": "🏓Pong🏓",
     "description": "A 2-player remake of the retro game Pong. Compete with friends and win challenges, or test your skills with the computer in cpu mode.",
     "pledged": 29446,
@@ -32,28 +21,6 @@ const games = ` [
     "device": "pc",
     "link": "https://battleship.zamijah-shakeurtomp.workers.dev/",
     "theme": "battleship-theme"
-  },
-  {
-    "name": "Stories",
-    "description": "Choose your own path with Stories! Enjoy a selection of choice-based stories with multiple endings.",
-    "pledged": 442602,
-    "goal": 78480,
-    "backers": 3869,
-    "img": "./assets/zoo_tycoon.png",
-    "device": "mobile",
-    "link": "https://stories.zamijah-shakeurtomp.workers.dev/",
-    "theme": "stories-theme"
-  },
-  {
-    "name": "Invasion",
-    "description": "The aliens are coming! Defend planet Earth in this mobile remake of the retro Battleship.",
-    "pledged": 442602,
-    "goal": 78480,
-    "backers": 3869,
-    "img": "./assets/zoo_tycoon.png",
-    "device": "mobile",
-    "link": "https://invasion.zamijah-shakeurtomp.workers.dev/",
-    "theme": "invasion-theme"
   }
 ]
 `

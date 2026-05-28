@@ -62,7 +62,7 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-// addGamesToPage(GAMES_JSON);
+addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
@@ -104,30 +104,30 @@ function addGamesToPage(games) {
 */
 
 // show only games that do not yet have enough funding
-function filtermobileOnly() {
-    deleteChildElements(gamesContainer);
+// function filtermobileOnly() {
+//     deleteChildElements(gamesContainer);
 
-    // use filter() to get a list of games that have not yet met their goal
-    let listOfmobileOnly = GAMES_JSON.filter ( (game) => {
-        return game.device === "mobile";
-    });
+//     // use filter() to get a list of games that have not yet met their goal
+//     let listOfmobileOnly = GAMES_JSON.filter ( (game) => {
+//         return game.device === "mobile";
+//     });
 
-    // use the function we previously created to add the mobile games to the DOM
-    addGamesToPage(listOfmobileOnly);
-}
+//     // use the function we previously created to add the mobile games to the DOM
+//     addGamesToPage(listOfmobileOnly);
+// }
 
 // show only games that are fully pc
-function filterpcOnly() {
-    deleteChildElements(gamesContainer);
+// function filterpcOnly() {
+//     deleteChildElements(gamesContainer);
 
-    // use filter() to get a list of games that have met or exceeded their goal
-    let listOfpcOnly = GAMES_JSON.filter ( (game) => {
-        return game.device === "pc";
-    });
+//     // use filter() to get a list of games that have met or exceeded their goal
+//     let listOfpcOnly = GAMES_JSON.filter ( (game) => {
+//         return game.device === "pc";
+//     });
 
-    // use the function we previously created to add mobile games to the DOM
-    addGamesToPage(listOfpcOnly);
-}
+//     // use the function we previously created to add mobile games to the DOM
+//     addGamesToPage(listOfpcOnly);
+// }
 
 const toggleDarkMode = () => {
     document.body.classList.toggle("dark-mode");
@@ -141,14 +141,14 @@ const toggleDarkMode = () => {
 // }
 
 // select each button in the "Our Games" section
-const mobileBtn = document.getElementById("mobile-btn");
-const pcBtn = document.getElementById("pc-btn");
+// const mobileBtn = document.getElementById("mobile-btn");
+// const pcBtn = document.getElementById("pc-btn");
 const darkmodeBtn = document.getElementById("theme-button");
 // const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-mobileBtn.addEventListener("click", filtermobileOnly)
-pcBtn.addEventListener("click", filterpcOnly)
+// mobileBtn.addEventListener("click", filtermobileOnly)
+// pcBtn.addEventListener("click", filterpcOnly)
 darkmodeBtn.addEventListener("click", toggleDarkMode)
 // allBtn.addEventListener("click", showAllGames)
 

@@ -109,12 +109,17 @@ h2 {
     font-size: 20px;
 }
 
-#games p {
+#announcements {
     display: flex;
+    flex-direction: column;
     padding: 0px 50px;
-    color: white;
     justify-content: center;
+    align-items: center;
     font-size: 20px;
+    color: white;
+    background-color: var(--light-mode-background-color-3);
+    margin: 0px 20px;
+    border-radius: 20px;
     /* max-width: 500px; */
 }
 
@@ -177,21 +182,7 @@ h2 {
     box-shadow: 0 0 10px #FFFFFF;
 }
 
-/* .game-card {
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #12161d;
-    padding: 5% 5%;
-    margin: 1%;
-    width: 400px;
-    text-align: center;
-    border-radius: 7px;
-    transition-duration: .3s;
-} */
 .game-card {
-    color: white;
     display: flex;
     flex-direction: column; /* Organizes contents stacked neatly from top to bottom */
     /* align-items: center; */
@@ -200,6 +191,7 @@ h2 {
     margin: 15px 0px;      
     width: 100%;            /* Force card to fill container width on mobile */
     max-width: 400px;       /* PREVENTS the card from ever stretching larger than 400px on desktop */
+    height: 500px;
     /* text-align: center; */
     border-radius: 7px;
     transition-duration: .3s;
@@ -273,7 +265,11 @@ h2 {
 .game-card.pong-theme {
     background: #1a0505;
     border: 3px dashed #ff3333;
-    color: #ffffff;
+    color: red;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+    font-size: 20px;
 }
 .game-card.pong-theme:hover {
     cursor: pointer;
@@ -281,7 +277,6 @@ h2 {
 }
 .game-card.pong-theme h3 {
     font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
-    color: #ff3333;
     text-transform: uppercase;
 }
 .game-card.pong-theme p {
@@ -292,42 +287,51 @@ h2 {
 
 /* Battleship Theme (Retro Arcade Blue) */
 .game-card.battleship-theme {
-    background: #1c2fae;
-    border: 3px dashed #ff3333;
-    color: #ffffff;
+    background: aqua;
+    border: 3px solid navy;
+    color: navy;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+    font-size: 20px;
 }
 .game-card.battleship-theme:hover {
     cursor: pointer;
-    box-shadow: 0 4px 30px rgba(255, 51, 51, 0.759);
+    box-shadow: 0 4px 30px rgba(1, 22, 51, 0.759);
 }
 .game-card.battleship-theme h3 {
     font-family: 'Press Start 2P', monospace; /* Uses your retro arcade font */
-    color: #ff3333;
     text-transform: uppercase;
 }
 .game-card.battleship-theme p {
     font-family: Tahoma, sans-serif;
     font-weight: bold;
 }
-
-/* Stories Theme (Romantic Girly Pink) */
-.game-card.stories-theme {
+.game-card.battleship-theme img {
+    margin-top: 40px;
+}
+    
+/* Dew Theme (Romantic Girly Pink) */
+.game-card.dew-theme {
     background: #ff1493;
     border: 5px solid #ff69b4;
-    color: #4a4a4a;
+    color: #fff0f5;;
     border-radius: 20px; /* Softer, rounder corners for the story app */
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+    font-size: 20px;
 }
-.game-card.stories-theme:hover {
+.game-card.dew-theme:hover {
     cursor: pointer;
     box-shadow: 0 4px 30px rgba(255, 105, 180, 0.775);
 }
-.game-card.stories-theme h3 {
+.game-card.dew-theme h3 {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
     line-height: .1;
-    color: #fff0f5;
 }
-.game-card.stories-theme p {
+.game-card.dew-theme p {
     font-family: Tahoma, sans-serif;
     font-weight: bold;
     line-height: 1.1;

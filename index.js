@@ -4,7 +4,7 @@
  * -> A function that deletes all child elements from a parent element in the DOM
 */
 
-// import the JSON data about the crowd pc games from the games.js file
+// import the JSON data about the crowd multi games from the games.js file
 // import { dark } from '@material-ui/core/styles/createPalette.js';
 import GAMES_DATA from './games.js';
 
@@ -98,59 +98,60 @@ addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
- * Challenge 5: Add functions to filter the pc and mobile games
+ * Challenge 5: Add functions to filter the multi and single games
  * total number of contributions, amount donated, and number of games on the site.
  * Skills used: functions, filter
 */
 
 // show only games that do not yet have enough funding
-// function filtermobileOnly() {
-//     deleteChildElements(gamesContainer);
+function filtersingleOnly() {
+    deleteChildElements(gamesContainer);
 
-//     // use filter() to get a list of games that have not yet met their goal
-//     let listOfmobileOnly = GAMES_JSON.filter ( (game) => {
-//         return game.device === "mobile";
-//     });
+    // use filter() to get a list of games that have not yet met their goal
+    let listOfsingleOnly = GAMES_JSON.filter ( (game) => {
+        return game.device === "single";
+    });
 
-//     // use the function we previously created to add the mobile games to the DOM
-//     addGamesToPage(listOfmobileOnly);
-// }
+    // use the function we previously created to add the single games to the DOM
+    addGamesToPage(listOfsingleOnly);
+}
 
-// show only games that are fully pc
-// function filterpcOnly() {
-//     deleteChildElements(gamesContainer);
+//show only games that are fully multi
+function filtermultiOnly() {
+    deleteChildElements(gamesContainer);
 
-//     // use filter() to get a list of games that have met or exceeded their goal
-//     let listOfpcOnly = GAMES_JSON.filter ( (game) => {
-//         return game.device === "pc";
-//     });
+    // use filter() to get a list of games that have met or exceeded their goal
+    let listOfmultiOnly = GAMES_JSON.filter ( (game) => {
+        return game.device === "multi";
+    });
 
-//     // use the function we previously created to add mobile games to the DOM
-//     addGamesToPage(listOfpcOnly);
-// }
+    // use the function we previously created to add single games to the DOM
+    addGamesToPage(listOfmultiOnly);
+}
 
 const toggleDarkMode = () => {
     document.body.classList.toggle("dark-mode");
 };
-// show all games
-// function showAllGames() {
-//     deleteChildElements(gamesContainer);
 
-//     // add all games from the JSON data to the DOM
-//     addGamesToPage(GAMES_JSON);
-// }
+//show all games
+function showAllGames() {
+    deleteChildElements(gamesContainer);
+
+    // add all games from the JSON data to the DOM
+    addGamesToPage(GAMES_JSON);
+}
 
 // select each button in the "Our Games" section
-// const mobileBtn = document.getElementById("mobile-btn");
-// const pcBtn = document.getElementById("pc-btn");
+const singleBtn = document.getElementById("single-btn");
+const multiBtn = document.getElementById("multi-btn");
 const darkmodeBtn = document.getElementById("theme-button");
-// const allBtn = document.getElementById("all-btn");
+const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
-// mobileBtn.addEventListener("click", filtermobileOnly)
-// pcBtn.addEventListener("click", filterpcOnly)
+singleBtn.addEventListener("click", filtersingleOnly)
+multiBtn.addEventListener("click", filtermultiOnly)
 darkmodeBtn.addEventListener("click", toggleDarkMode)
-// allBtn.addEventListener("click", showAllGames)
+allBtn.addEventListener("click", showAllGames)
 
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
@@ -160,19 +161,19 @@ darkmodeBtn.addEventListener("click", toggleDarkMode)
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
 
-// use filter or reduce to count the number of mobile games
-const mobileGames = GAMES_JSON.filter( (game) => {
+// use filter or reduce to count the number of single games
+const singleGames = GAMES_JSON.filter( (game) => {
     return game.pledged < game.goal;
 });
 console.log(); // get the length of that filtered list
 
-// create a string that explains the number of mobile games using the ternary operator
+// create a string that explains the number of single games using the ternary operator
 // create the variable for the grammatical string part
-const gameText = mobileGames.length === 1 
+const gameText = singleGames.length === 1 
   ? '1 game remains' 
-  : `${mobileGames.length} games remain`;
+  : `${singleGames.length} games remain`;
 // assemble the final string
-// const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${gameText} mobile. We need your help to fund these amazing games!`;
+// const displayStr = `A total of $${totalRaised.toLocaleString('en-US')} has been raised for ${GAMES_JSON.length} games. Currently, ${gameText} single. We need your help to fund these amazing games!`;
 
 // // create a new DOM element containing the template string and append it to the description container
 // const newPara = document.createElement('p');

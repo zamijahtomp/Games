@@ -9,7 +9,8 @@ const games = ` [
     "img": "./assets/pong.png",
     "device": "multi",
     "link": "https://pong.zamijah-shakeurtomp.workers.dev/",
-    "theme": "pong-theme"
+    "theme": "pong-theme",
+    "cta": "Play"
   },
   {
     "name": "Battleship🚢",
@@ -17,10 +18,11 @@ const games = ` [
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
-    "img": "./assets/deity_tarot.png",
+    "img": "./assets/battleship.png",
     "device": "multi",
     "link": "https://battleship.zamijah-shakeurtomp.workers.dev/",
-    "theme": "battleship-theme"
+    "theme": "battleship-theme",
+    "cta": "Play"
   },
   {
     "name": "Alien",
@@ -28,21 +30,23 @@ const games = ` [
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
-    "img": "./assets/deity_tarot.png",
+    "img": "./assets/alien.png",
     "device": "single",
-    "link": "https://alien.zamijah-shakeurtomp.workers.dev/",
-    "theme": "alien-theme"
+    "link": "https://rpg.zamijah-shakeurtomp.workers.dev/",
+    "theme": "alien-theme",
+    "cta": "Play"
   },
   {
-    "name": "Dew-Lite",
-    "description": "The aliens are coming! Defend planet Earth in this mobile remake of the retro Battleship.",
+    "name": "Dew-Lite 🌱",
+    "description": "A cozy pocket farming game — till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Android.",
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
-    "img": "./assets/deity_tarot.png",
-    "device": "single",
-    "link": "https://battleship.zamijah-shakeurtomp.workers.dev/",
-    "theme": "dew-theme"
+    "img": "./assets/dewlite.png",
+    "device": "mobile",
+    "link": "./downloads/Dew-Lite.apk",
+    "theme": "dew-theme",
+    "cta": "Download"
   }
 ]
 `

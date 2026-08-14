@@ -46,10 +46,15 @@ function addGamesToPage(games) {
             <h3>${game.name}</h3>
             <p>${game.description}</p>
             <img class="game-img" src="${game.img}" alt="${game.name}" />
+            ${game.cta ? `<button class="game-cta">${game.cta}</button>` : ''}
         `;
 
         // Handle card click to open the link
-        gameCard.addEventListener("click", () => {
+        // Only the button inside the card triggers navigation/download —
+        // not the card as a whole.
+        const actionBtn = gameCard.querySelector(".game-cta");
+        actionBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
             if (game.link) {
                 window.location.href = game.link;
             }
@@ -129,6 +134,18 @@ function filtermultiOnly() {
     addGamesToPage(listOfmultiOnly);
 }
 
+function filtermobileOnly() {
+    deleteChildElements(gamesContainer);
+
+    // use filter() to get a list of games that have not yet met their goal
+    let listOfmobileOnly = GAMES_JSON.filter ( (game) => {
+        return game.device === "mobile";
+    });
+
+    // use the function we previously created to add the single games to the DOM
+    addGamesToPage(listOfsingleOnly);
+}
+
 const toggleDarkMode = () => {
     document.body.classList.toggle("dark-mode");
 };
@@ -144,12 +161,14 @@ function showAllGames() {
 // select each button in the "Our Games" section
 const singleBtn = document.getElementById("single-btn");
 const multiBtn = document.getElementById("multi-btn");
+const mobileBtn = document.getElementById("mobile-btn");
 const darkmodeBtn = document.getElementById("theme-button");
 const allBtn = document.getElementById("all-btn");
 
 // add event listeners with the correct functions to each button
 singleBtn.addEventListener("click", filtersingleOnly)
 multiBtn.addEventListener("click", filtermultiOnly)
+mobileBtn.addEventListener("click", filtermobileOnly)
 darkmodeBtn.addEventListener("click", toggleDarkMode)
 allBtn.addEventListener("click", showAllGames)
 

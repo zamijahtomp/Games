@@ -243,6 +243,7 @@ h2 {
     background: #111a24;
     border: 2px dashed #00ffcc;
     color: #e0e0e0;
+    font-size: 20px;
 }
 
 .game-card.alien-theme:hover {
@@ -313,8 +314,8 @@ h2 {
     
 /* Dew Theme (Romantic Girly Pink) */
 .game-card.dew-theme {
-    background: #ff1493;
-    border: 5px solid #ff69b4;
+    background: #1ba735;
+    border: 5px solid #227c40;
     color: #fff0f5;;
     border-radius: 20px; /* Softer, rounder corners for the story app */
     display: flex;
@@ -324,7 +325,7 @@ h2 {
 }
 .game-card.dew-theme:hover {
     cursor: pointer;
-    box-shadow: 0 4px 30px rgba(255, 105, 180, 0.775);
+    box-shadow: 0 4px 30px rgba(38, 203, 76, 0.775);
 }
 .game-card.dew-theme h3 {
     font-family: 'Pacifico', cursive;
@@ -332,6 +333,14 @@ h2 {
     line-height: .1;
 }
 .game-card.dew-theme p {
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.game-card.dew-theme button {
+    background-color: #227c40;
+    cursor: pointer;
     font-family: Tahoma, sans-serif;
     font-weight: bold;
     line-height: 1.1;

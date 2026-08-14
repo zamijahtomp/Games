@@ -38,19 +38,19 @@ const games = ` [
   },
   {
     "name": "Dew-Lite for Web 🌱",
-    "description": "A cozy farming game — till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Android.",
+    "description": "A cozy farming game - till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Web for IOS support.",
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
     "img": "./assets/dewlite.png",
-    "device": "mobile",
-    "link": "./dewlite/Dew-Lie.html",
+    "device": "web",
+    "link": "https://zamijahtomp.github.io/Dewlite-HTML/",
     "theme": "dew-theme",
     "cta": "Play"
   },
   {
     "name": "Dew-Lite 🌱",
-    "description": "A cozy pocket farming game — till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Android.",
+    "description": "A cozy pocket farming game - till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Android.",
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,

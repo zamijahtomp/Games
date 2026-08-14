@@ -146,6 +146,18 @@ function filtermobileOnly() {
     addGamesToPage(listOfmobileOnly);
 }
 
+function filterwebOnly() {
+    deleteChildElements(gamesContainer);
+
+    // use filter() to get a list of games that have not yet met their goal
+    let listOfwebOnly = GAMES_JSON.filter ( (game) => {
+        return game.device === "web";
+    });
+
+    // use the function we previously created to add the single games to the DOM
+    addGamesToPage(listOfwebOnly);
+}
+
 const toggleDarkMode = () => {
     document.body.classList.toggle("dark-mode");
 };
@@ -162,6 +174,7 @@ function showAllGames() {
 const singleBtn = document.getElementById("single-btn");
 const multiBtn = document.getElementById("multi-btn");
 const mobileBtn = document.getElementById("mobile-btn");
+const webBtn = document.getElementById("web-btn");
 const darkmodeBtn = document.getElementById("theme-button");
 const allBtn = document.getElementById("all-btn");
 
@@ -169,6 +182,7 @@ const allBtn = document.getElementById("all-btn");
 singleBtn.addEventListener("click", filtersingleOnly)
 multiBtn.addEventListener("click", filtermultiOnly)
 mobileBtn.addEventListener("click", filtermobileOnly)
+webBtn.addEventListener("click", filterwebOnly)
 darkmodeBtn.addEventListener("click", toggleDarkMode)
 allBtn.addEventListener("click", showAllGames)
 

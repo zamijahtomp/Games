@@ -44,7 +44,7 @@ const games = ` [
     "backers": 3869,
     "img": "./assets/dewlite.png",
     "device": "mobile",
-    "link": "./downloads/Dew-Lite.apk",
+    "link": "https://github.com/zamijahtomp/Games/releases/download/Dew-Lite/Dew-Lite.apk",
     "theme": "dew-theme",
     "cta": "Download"
   }

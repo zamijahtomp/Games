@@ -14,7 +14,7 @@ const games = ` [
   },
   {
     "name": "Battleship🚢",
-    "description": "The aliens are coming! Defend planet Earth in this mobile remake of the retro Battleship.",
+    "description": "Ahoy matey! Defend your fleet in this 2D retro remake of the classic game Battleship.",
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
@@ -26,7 +26,7 @@ const games = ` [
   },
   {
     "name": "Alien",
-    "description": "The aliens are coming! Defend planet Earth in this mobile remake of the retro Battleship.",
+    "description": "The aliens are coming! Defend planet Earth in this 2D remake of the classic Alien franchise.",
     "pledged": 442602,
     "goal": 78480,
     "backers": 3869,
@@ -34,6 +34,18 @@ const games = ` [
     "device": "single",
     "link": "https://rpg.zamijah-shakeurtomp.workers.dev/",
     "theme": "alien-theme",
+    "cta": "Play"
+  },
+  {
+    "name": "Dew-Lite for Web 🌱",
+    "description": "A cozy farming game — till, plant, water, and harvest crops, then defend your farm from nightly critter raids. Built in Godot for Android.",
+    "pledged": 442602,
+    "goal": 78480,
+    "backers": 3869,
+    "img": "./assets/dewlite.png",
+    "device": "mobile",
+    "link": "./dewlite/Dew-Lie.html",
+    "theme": "dew-theme",
     "cta": "Play"
   },
   {

@@ -143,7 +143,7 @@ function filtermobileOnly() {
     });
 
     // use the function we previously created to add the single games to the DOM
-    addGamesToPage(listOfsingleOnly);
+    addGamesToPage(listOfmobileOnly);
 }
 
 const toggleDarkMode = () => {
